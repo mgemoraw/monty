@@ -4,6 +4,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdbool.h>
+#include <string.h>
+
+#define BUFFER_SIZE 1024
+
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -34,5 +39,28 @@ typedef struct instruction_s
         char *opcode;
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
+
+
+/**
+ * strct bus_s - 
+ * @str:
+ * 
+ * Description:
+ * 
+ */ 
+typedef struct bus_s
+{
+
+} bus_t;
+
+
+stack_t push(stack_t **stack);
+stack_t pop(stack_t **stack);
+stack_t *pall(stack_t **stack);
+
+void usage();
+int handle_opcodes(stack_t **stack, unsigned int line_number)
+
+
 
 #endif
